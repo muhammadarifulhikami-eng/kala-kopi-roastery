@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kala Kopi Roastery — Specialty Coffee &amp; E-Commerce Store</title>
+  <meta
+    name="description"
+    content="Kala Kopi Roastery: Biji kopi specialty Nusantara pilihan, disangrai fresh setiap minggu. Belanja online mudah dengan keranjang belanja & checkout WhatsApp."
+  />
+  <link rel="icon" type="image/png" href="assets/favicon-h.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Top Announcement Strip -->
+  <div class="top-strip">
+    Gratis Ongkir se-Jabodetabek untuk pembelian min. 2 pack · Ingin toko online seperti ini? <a href="https://dev.hikami.my.id" target="_blank" rel="noopener noreferrer">Hubungi HIKAMI-DEV</a>
+  </div>
+
+  <!-- Navbar -->
+  <header class="coffee-header" id="coffeeHeader">
+    <div class="container header-inner">
+      <a href="#top" class="coffee-brand" aria-label="Kala Kopi Roastery">
+        <svg class="coffee-emblem" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" fill="#2B1810" />
+          <ellipse cx="20" cy="20" rx="8.5" ry="11.5" transform="rotate(-20 20 20)" fill="#A2461A" />
+          <path d="M16.5 10.5C19.5 16 20.5 23 23.5 29.5" stroke="#F8F4EE" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <div class="brand-text">
+          <strong>KALA KOPI</strong>
+          <span>SPECIALTY ROASTERY</span>
+        </div>
+      </a>
+
+      <nav class="coffee-nav" aria-label="Navigasi Toko Kopi">
+        <a href="#shop" class="nav-link">Belanja</a>
+        <a href="#categories" class="nav-link">Kategori</a>
+        <a href="#story" class="nav-link">Cerita Kami</a>
+        <a href="#brew" class="nav-link" id="openBrewNav">Panduan Seduh</a>
+        <a href="#contact" class="nav-link">Kontak</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="cart-btn" id="openCartBtn" aria-label="Buka Keranjang">
+          🛒 <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button type="button" class="mobile-toggle" id="mobileToggle" aria-label="Menu">☰</button>
+      </div>
+    </div>
+
+    <div class="mobile-drawer" id="mobileDrawer">
+      <a href="#shop">Belanja Kopi</a>
+      <a href="#categories">Kategori Biji</a>
+      <a href="#story">Cerita Kami</a>
+      <a href="#contact">Kontak</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="hero-kicker">SPECIALTY COFFEE ROASTERS</span>
+          <h1>Kopi dengan<br />Makna</h1>
+          <p>
+            Single-origin Nusantara dan racikan house blend yang disangrai presisi setiap minggu—menghadirkan cita rasa autentik langsung dari petani ke cangkir Anda.
+          </p>
+          <a href="#shop" class="btn-terracotta">Belanja Kopi →</a>
+        </div>
+
+        <div class="hero-visual">
+          <img src="assets/hero-coffee.jpg" alt="Kopi Specialty Kala Kopi Roastery" />
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP BY BEAN TYPE -->
+    <section class="section-categories" id="categories">
+      <div class="container">
+        <div class="head-row">
+          <h2>Pilih Berdasarkan Karakter</h2>
+          <a href="#shop" class="text-link">Lihat Semua Kopi →</a>
+        </div>
+
+        <div class="cat-grid">
+          <article class="cat-card" data-filter="Single Origin">
+            <img src="assets/cat-origin.jpg" alt="Single Origin" />
+            <div class="cat-overlay">
+              <h3>Single Origin</h3>
+              <p>Karakter unik tiap daerah penghasil kopi terbaik</p>
+              <span>→</span>
+            </div>
+          </article>
+
+          <article class="cat-card" data-filter="House Blend">
+            <img src="assets/cat-blend.jpg" alt="House Blends" />
+            <div class="cat-overlay">
+              <h3>House Blends</h3>
+              <p>Seimbang, kaya rasa, dan nikmat setiap hari</p>
+              <span>→</span>
+            </div>
+          </article>
+
+          <article class="cat-card" data-filter="Espresso">
+            <img src="assets/cat-espresso.jpg" alt="Espresso" />
+            <div class="cat-overlay">
+              <h3>Espresso</h3>
+              <p>Body tebal dengan krema keemasan sempurna</p>
+              <span>→</span>
+            </div>
+          </article>
+
+          <article class="cat-card" data-filter="Cold Brew">
+            <img src="assets/cat-coldbrew.jpg" alt="Cold Brew" />
+            <div class="cat-overlay">
+              <h3>Cold Brew</h3>
+              <p>Halus, rendah asam, dan segar untuk disajikan dingin</p>
+              <span>→</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR COFFEES (PRODUCT GRID) -->
+    <section class="section-shop" id="shop">
+      <div class="container">
+        <div class="head-row">
+          <h2>Koleksi Kopi Kami</h2>
+          <div class="shop-tabs" role="tablist" aria-label="Filter Produk Kopi">
+            <button type="button" class="shop-tab active" data-cat="all">Semua Kopi</button>
+            <button type="button" class="shop-tab" data-cat="Single Origin">Single Origin</button>
+            <button type="button" class="shop-tab" data-cat="House Blend">House Blend</button>
+            <button type="button" class="shop-tab" data-cat="Espresso">Espresso</button>
+            <button type="button" class="shop-tab" data-cat="Cold Brew">Cold Brew</button>
+          </div>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+          <article class="prod-card" data-cat="Single Origin">
+            <div class="prod-img-box"><img src="assets/product-bag.jpg" alt="Aceh Gayo Honey" /></div>
+            <div class="prod-body">
+              <h3>Aceh Gayo Honey</h3>
+              <span class="prod-notes">Floral · Gula Aren · Citrus · 250g</span>
+              <strong class="prod-price">Rp 115.000</strong>
+              <button type="button" class="btn-add-cart" data-id="gayo" data-name="Aceh Gayo Honey (250g)" data-price="115000">
+                🛒 Tambah ke Keranjang
+              </button>
+            </div>
+          </article>
+
+          <article class="prod-card" data-cat="Single Origin">
+            <div class="prod-img-box"><img src="assets/cat-origin.jpg" alt="Toraja Sapan Washed" /></div>
+            <div class="prod-body">
+              <h3>Toraja Sapan Washed</h3>
+              <span class="prod-notes">Dark Chocolate · Rempah · Herbal · 250g</span>
+              <strong class="prod-price">Rp 120.000</strong>
+              <button type="button" class="btn-add-cart" data-id="toraja" data-name="Toraja Sapan Washed (250g)" data-price="120000">
+                🛒 Tambah ke Keranjang
+              </button>
+            </div>
+          </article>
+
+          <article class="prod-card" data-cat="Espresso House Blend">
+            <div class="prod-img-box"><img src="assets/cat-espresso.jpg" alt="Kala Espresso Blend" /></div>
+            <div class="prod-body">
+              <h3>Kala Espresso Blend</h3>
+              <span class="prod-notes">Caramel · Almond · Creamy · 250g</span>
+              <strong class="prod-price">Rp 105.000</strong>
+              <button type="button" class="btn-add-cart" data-id="espresso" data-name="Kala Espresso Blend (250g)" data-price="105000">
+                🛒 Tambah ke Keranjang
+              </button>
+            </div>
+          </article>
+
+          <article class="prod-card" data-cat="Cold Brew House Blend">
+            <div class="prod-img-box"><img src="assets/cat-coldbrew.jpg" alt="Mandheling Cold Brew Pack" /></div>
+            <div class="prod-body">
+              <h3>Mandheling Cold Brew</h3>
+              <span class="prod-notes">Cocoa · Cedar · Smooth Finish · 250g</span>
+              <strong class="prod-price">Rp 110.000</strong>
+              <button type="button" class="btn-add-cart" data-id="coldbrew" data-name="Mandheling Cold Brew (250g)" data-price="110000">
+                🛒 Tambah ke Keranjang
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORIGIN STORY -->
+    <section class="section-story" id="story">
+      <div class="container story-grid">
+        <div class="story-photo">
+          <img src="assets/origin-farmer.jpg" alt="Petani dan Kebun Kopi Nusantara" />
+        </div>
+        <div class="story-copy">
+          <span class="kicker">CERITA ASAL BIJI</span>
+          <h2>Dari Kebun ke Sangrai</h2>
+          <p>
+            Kala Kopi lahir dari keyakinan sederhana—kopi terbaik menciptakan koneksi yang bermakna. Kami bermitra langsung dengan petani kopi di Gayo, Toraja, dan Mandailing, lalu menyangrai setiap batch dengan profil suhu presisi untuk mengeluarkan karakter terbaiknya.
+          </p>
+          <button type="button" class="btn-terracotta" id="openBrewStory">Lihat Panduan Seduh →</button>
+        </div>
+      </div>
+
+      <div class="container values-bar">
+        <div class="val-item"><span>☕</span><div><strong>Biji Pilihan Terbaik</strong><small>Dipilih dari kebun dataran tinggi Nusantara</small></div></div>
+        <div class="val-item"><span>🔥</span><div><strong>Sangrai Presisi</strong><small>Small-batch roasting agar aroma selalu segar</small></div></div>
+        <div class="val-item"><span>🌱</span><div><strong>Lebih Berkelanjutan</strong><small>Kemitraan adil yang mendukung petani lokal</small></div></div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER STRIP -->
+    <section class="section-newsletter">
+      <div class="container nl-inner">
+        <div>
+          <h2>Dapatkan Info Panen &amp; Promo Terbaru</h2>
+          <p>Berlangganan info rilis micro-lot terbaru, tips seduh rumahan, dan penawaran eksklusif.</p>
+        </div>
+        <form class="nl-form" id="nlForm">
+          <input type="email" id="nlEmail" placeholder="Masukkan alamat email Anda" required />
+          <button type="submit" class="btn-espresso">Berlangganan →</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="coffee-footer" id="contact">
+    <div class="container footer-grid">
+      <div>
+        <div class="coffee-brand light">
+          <svg class="coffee-emblem" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <circle cx="20" cy="20" r="18" fill="#A2461A" />
+            <ellipse cx="20" cy="20" rx="8.5" ry="11.5" transform="rotate(-20 20 20)" fill="#F8F4EE" />
+            <path d="M16.5 10.5C19.5 16 20.5 23 23.5 29.5" stroke="#2B1810" stroke-width="2" stroke-linecap="round" />
+          </svg>
+          <div class="brand-text">
+            <strong>KALA KOPI</strong>
+            <span>SPECIALTY ROASTERY</span>
+          </div>
+        </div>
+        <p class="footer-about">
+          Kopi specialty yang dipilih secara bertanggung jawab dan disangrai presisi dari kebun hingga ke cangkir Anda.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Belanja</h4>
+        <ul>
+          <li><a href="#shop">Semua Kopi</a></li>
+          <li><a href="#shop">Single Origin</a></li>
+          <li><a href="#shop">House Blends</a></li>
+          <li><a href="#shop">Espresso &amp; Cold Brew</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Pelajari</h4>
+        <ul>
+          <li><a href="#story">Cerita Kami</a></li>
+          <li><a href="#brew" id="footerBrewLink">Panduan Seduh</a></li>
+          <li><a href="#categories">Asal Biji Nusantara</a></li>
+          <li><a href="#shop">Kemitraan B2B Café</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Dukungan</h4>
+        <ul>
+          <li>Jl. Senopati No. 32, Jakarta Selatan</li>
+          <li>+62 878-7759-0663 (WhatsApp)</li>
+          <li>roastery@kalakopi.id</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© 2026 Kala Kopi Roastery (Showcase Demo). All Rights Reserved.</span>
+      <span>Website design by <a href="https://dev.hikami.my.id" target="_blank" rel="noopener noreferrer" class="hikami-credit">HIKAMI-DEV | ひかみ</a></span>
+    </div>
+  </footer>
+
+  <!-- SLIDE-OUT CART DRAWER -->
+  <div class="drawer-backdrop" id="cartBackdrop" aria-hidden="true">
+    <aside class="cart-drawer" aria-label="Keranjang Belanja">
+      <div class="cart-head">
+        <h3>Keranjang Belanja</h3>
+        <button type="button" class="close-btn" id="closeCartBtn" aria-label="Tutup">×</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-foot">
+        <div class="cart-total-row">
+          <span>Total Belanja</span>
+          <strong id="cartTotal">Rp 0</strong>
+        </div>
+        <button type="button" class="btn-terracotta" id="checkoutWaBtn" style="width:100%;justify-content:center;">
+          Checkout via WhatsApp →
+        </button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- BREW GUIDE / INFO MODAL -->
+  <div class="modal-backdrop" id="infoModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="infoTitle">
+      <button type="button" class="close-btn" id="closeInfoBtn" aria-label="Tutup" style="position:absolute;top:12px;right:14px;">×</button>
+      <span class="kicker" id="infoKicker">PANDUAN SEDUH</span>
+      <h3 id="infoTitle">Rekomendasi Seduh Kala Kopi</h3>
+      <div id="infoBody" style="font-size:14px;color:#5c4a3e;"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
